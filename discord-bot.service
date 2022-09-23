@@ -1,0 +1,13 @@
+[Unit]
+Description=Discord bot for rock paper scissors contract
+[Service]
+WorkingDirectory=/root/rockpaperscissors-discord-bot/
+ExecStart=npm run start
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=rps-discord-bot
+User=root
+Group=root
+[Install]
+WantedBy=multi-user.target
